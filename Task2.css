@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+/* General Styles */
+html {
+  background-color: #F0F8FF;
+}
+
+nav, footer {
+  width: 100%;
+  padding: 1px 10px 40px;
+  background-color: #87CEEB;
+}
+img {
+	border-radius: 10px;
+}
+/* Navigation Styles */
+.nav_header ul li {
+  list-style: none;
+  float: left;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14pt;
+  letter-spacing: 1px;
+  margin-left: auto;
+  text-align: center;
+  width: 25%;
+  color: #333;
+}
+
+.nav_header a {
+  color: #333;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14pt;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.nav_header a:hover {
+  color: #FF4500;
+  cursor: pointer;
+}
+.nav_header img {
+	position: absolute;
+	top: 14px;
+	left: 45px;
+}
+
+/*              */
+.column {
+  display: flex;
+}
+
+.info {
+  flex: 70%;
+  float: left;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: #F0FFFF;
+}
+
+.side {
+  flex: 30%;
+  float: left;
+  background-color: #87CEEB;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+.rainier {
+	display: flex;
+}
+.rainier img {
+	position: relative;
+	right: 12px;
+	margin: 5px;
+
+}
+ol {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: left;
+}
+ol li {
+	position: relative;
+	right: 15px;
+	padding: 5px;
+}
+/* State */
+#state h1 {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+#state div {
+  width: 100%;
+  padding: 0px;
+  margin: 5px;
+  text-align: center;
+}
+
+#state p {
+  padding: 0px 10px 10px 10px;
+  text-align: left;
+}
+
+/* City */
+#city h1 {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+#city div {
+  width: 100%;
+  padding: 0px;
+  margin: 5px;
+  text-align: center;
+}
+
+#city p {
+  padding: 0px 10px 10px 10px;
+  text-align: left;
+}
+
+/* Bottom of City Page */
+.city_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.city_image,
+.city_side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: #87CEEB;
+  margin: 0 10px;
+}
+
+.city_image img {
+  width: 96%;
+  height: 96%;
+  object-fit: cover;
+  margin: 2%;
+  border-radius: 10px;
+}
+
+/* Form Styles */
+.form_header {
+  position: relative;
+  right: -60px;
+}
+
+.form {
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: #F0FFFF;
+  margin: 5px 5px 10px 5px;
+}
+
+.form_data {
+  display: flex;
+  justify-content: center;
+}
+
+.form_split {
+  display: flex;
+}
+
+.form_data input {
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.form_data label {
+  margin: 5px;
+  padding: 10px;
+  text-align: right;
+}
+
+.text_box {
+  display: flex;
+  align-items: center;  
+}
+
+.text_box label {
+  margin-right: 10px; 
+}
+
+#emailMismatch {
+  color: red;
+  font-style: italic;
+  display: none;
+}
+
+#emailMismatch.active {
+  display: block;
+}
+
+.fn {
+  position: relative;
+  left: -30px;
+}
+
+.ln {
+  position: relative;
+  right: -47px;
+}
+
+.text_box {
+  position: relative;
+  right: 24px;
+}
+
+#text_area {
+  margin: 5px;
+  padding: 10px;
+  width: 502px;
+  height: 90px;
+  border-radius: 5px;
+  border: 2px solid #333;
+}
+
+.form_data input::placeholder {
+  color: grey;
+  font-style: italic;
+}
+
+input[type="submit"] {
+  margin: 5px;
+  width: 100px;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #87CEEB;
+}
+
+.submit-container {
+  position: relative;
+  margin-right: -120px;
+}
+
+.submit p {
+  float: right;
+  color: red;
+  font-style: italic;
+}
+
+cite {
+  font-size: 8pt;
+}
+
+/* Table Styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #87CEEB;
+  color: #333;
+}
+
+tr {
+  background-color: #F0FFFF;
+}
