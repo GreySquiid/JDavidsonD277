@@ -1,12 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D277</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Page (Home)</title>
+  <link rel="stylesheet" href="Task2.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is a simple webpage.</p>
+  <header>
+    <nav class="nav_header">
+		<div>	
+         <img src="wa_flag.png" width="75" alt="Mt. Rainier">
+        </div>
+      <ul>
+        <li><a href="Task2_home.html">Home</a></li>
+        <li><a href="Task2_olympia.html">Olympia</a></li>
+        <li><a href="Task2_seattle.html">Seattle</a></li>
+        <li><a href="Task2_spokane.html">Spokane</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="state">
+    <div class="column">
+      <div class="info">
+        <h1>Washington State</h1>
+        <section>
+          <div class="rainier">
+            <div>
+              <p>Situated in the scenic Pacific Northwest region of the United States, Washington State achieved the milestone of becoming the 42nd state in 1889. Often hailed as "The Evergreen State," Washington's diverse geography is a striking feature. From expansive snowy mountain ranges that span the state to temperate rainforests in the west, its landscape is truly varied and captivating.</p>
+			  <p>Notably, the state is home to two iconic volcanoes nestled within its mountainous terrain—Mt. St. Helens, infamous for its eruption in May of 1980, and the majestic Mt. Rainier. This geographical diversity and natural splendor contribute to the unique character of Washington State, making it a destination rich in both history and breathtaking landscapes.</p>
+            </div>
+            <div>
+              <img src="mount_rainier.jpeg" width="500" alt="Mt. Rainier">
+            </div>
+          </div>
+          <p>Washington State holds the 13th position among the largest states in the United States by population, boasting a thriving community of approximately 7.739 million residents. Beyond its demographic significance, the state is distinguished for its notable contributions to industries such as lumber and agriculture, solidifying its prominent position on the national stage.</p>
+		  <p>Moreover, Washington's economic landscape is characterized by a robust manufacturing sector, encompassing diverse industries such as aircraft, missiles, shipbuilding, food processing, metals, and more. This economic diversity underscores the state's significance as a hub for innovation and production, playing a vital role in the nation's industrial landscape. <cite><a href="https://en.wikipedia.org/wiki/Washington_(state)#History" target="_blank">Wikipedia</a></cite></p>
+          <p>You can find the official Washington State website by following this <a href="https://www.WA.gov" target="_blank">link</a></p>
+        </section>
+      </div>
+      <div class="side">
+        <aside>
+          <h2>5 Facts About Washington</h2>
+          <div>
+            <ol>
+              <li>There are 5 different volcanoes in Washington.</li>
+              <li>Washington produces the most apples in the country.</li>
+              <li>There are over 3,000 glaciers in the Washington mountain ranges.</li>
+              <li>Washington has 3 national parks: Olympic, North Cascades, and Mount Rainier.</li>
+              <li>Olympic National park contains four separate rainforests: Quinault, Queets, Hoh, and Bogachiel.</li>
+            </ol>
+		  <cite><a href="https://stateofwatourism.com/wander-here-19-interesting-facts-about-the-state-of-washington/" target="_blank">State of WA tourism</a></cite>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+  <div class="form">
+    <div class="form_header">
+      <h3>Request Information Below</h3>
+      <p><i>Want to learn more about Washington? Fill out the form below.</i></p>
+    </div>
+    <form action="javascript:void(0);" method="get" class="info_form" onsubmit="return validateForm(event);">
+      <div class="form_data">
+        <div class="form_split">
+          <div class="fn">
+            <label for="first_name">First Name:</label>
+            <input id="first_name" name="first_name" type="text" placeholder="First Name">
+          </div>
+        </div>
+        <div class="form_split">
+          <div class="ln">
+            <label for="last_name">Last Name:</label>
+            <input id="last_name" name="last_name" type="text" placeholder="Last Name">
+          </div>
+        </div>
+      </div>
+      <div class="form_data">
+        <div class="form_split">
+          <label for="first_name">Email Address:</label>
+          <input id="email" name="email" type="email" placeholder="Email Address">
+        </div>
+        <div class="form_split">
+          <label for="conf_email">Confirm Email Address:</label>
+          <input id="conf_email" name="conf_email" type="email" placeholder="Email Address">
+        </div>
+      </div>
+      <div class="form_data">
+        <div class="text_box">
+          <label for="text_area">Questions/Comments:</label>
+          <textarea id="text_area" name="text_area" placeholder="Leave any questions or comments here"></textarea>
+        </div>
+      </div>
+      <div class="form_data">
+        <div class="submit-container">
+          <input id="submit" name="submit" type="submit">
+          <p id="emailMismatch">Emails do not match</p>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script>
+    function validateForm(event) {
+      event.preventDefault();
+      console.log('Form submitted');
+      var email = document.getElementById('email').value;
+      var confEmail = document.getElementById('conf_email').value;
+      var emailMismatch = document.getElementById('emailMismatch');
+
+      if (email !== confEmail) {
+        emailMismatch.textContent = 'Emails do not match.';
+        emailMismatch.classList.add('active');
+        return false;
+      } else {
+        emailMismatch.textContent = '';
+        emailMismatch.classList.remove('active');
+        return true;
+      }
+    }
+  </script>
+<footer></footer>
 </body>
 </html>
